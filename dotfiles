@@ -1,0 +1,107 @@
+#!/usr/bin/env python3
+
+# TODO:
+# - add argument add file
+# - add argument dry run
+
+import argparse  # https://docs.python.org/3/library/argparse.html
+import errno
+import os  #https://docs.python.org/3/library/os.html
+import pathlib
+import shutil  # https://docs.python.org/3/library/shutil.html
+import subprocess
+import tempfile
+import sys
+
+dotfiles_dir = os.getcwd()
+home = str(pathlib.Path.home())
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Create symlink between Dotfiles dir and User dir.")
+    parser.add_argument("--force", "-f", action="store_true", dest="force", help="Remove and recreate symlink.") 
+    parser.add_argument("--dry-run", "-d", action="store_true", dest="dry_run", help="Run without creating symlinks.") 
+    parser.add_argument("--item", "-i", dest="item", help="Create symlink for specific item.")
+
+    return parser.parse_args()
+
+
+def symlink(src, des, force, dry_run=False):
+    success = False
+
+    try:
+        os.symlink(src, des)
+        success = True
+    except OSError as e:
+        if e.errno == errno.EEXIST:
+            if force:
+                os.remove(des)
+                print("rm ", des)
+                os.symlink(src, des)
+                success = True
+            else:
+                print("unchanged", des)
+        elif e.errno == errno.ENOENT:
+            path = des.rsplit("/", 1)[0]  # remove file name from path
+            print("mkdir ", path)
+            os.makedirs(path)
+            os.symlink(src, des)
+            success = True
+
+    return success
+
+
+def get_filenames():
+    filenames = []
+    exclude_files = load_exclude_files()
+
+    exclude = lambda filename: any(
+        "/".join([dotfiles_dir, exclude_dir]) in filename 
+        for exclude_dir in exclude_files
+    )
+
+
+    for root, _, files in os.walk(dotfiles_dir, topdown=False):
+        for file_ in files:
+            filenames.append("/".join([root, file_]))
+    
+    return [
+        file_.replace("/".join([dotfiles_dir, ""]), "") 
+        for file_ in filenames 
+        if not exclude(file_)
+    ]
+
+
+def load_exclude_files():
+    exclude_files = [
+        "dotfiles",
+        ".dotfilesignore",
+    ]
+    dotfiles_ignore = "/".join([dotfiles_dir, ".dotfilesignore"])
+    with open(dotfiles_ignore, "r") as file_:
+        lines = file_.readlines()
+        for line in lines:
+            exclude_files.append(line.replace("\n", ""))
+    return exclude_files
+
+
+def main():
+    args = parse_args()
+
+    item = args.item
+    if item and os.path.exists(item):
+        filenames = [args.item]
+    else:
+        filenames = get_filenames()
+
+    for filename in filenames:
+        src = "/".join([dotfiles_dir, filename])
+        des = "/".join([home, filename])
+        if symlink(src, des, args.force):
+            print(f"ln {src} {des}")
+
+
+if __name__ == "__main__":
+    print("Start\n")
+    main()
+    print("Done")

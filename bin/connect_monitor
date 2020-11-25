@@ -1,0 +1,78 @@
+#!/usr/bin/env python3
+
+import subprocess
+import sys
+from enum import Enum
+from typing import Set
+
+
+class Position(Enum):
+    RIGHT_OF = "--right-of"
+    LEFT_OF = "--left-of"
+    ABOVE = "--above"
+
+
+def list_providers() -> Set[str]:
+    return set(
+        subprocess.check_output("xrandr --listproviders", shell=True)
+        .decode()
+        .splitlines()
+    )
+
+
+def set_providers(provider: int, src: int) -> None:
+    subprocess.run(
+        ["xrandr --setprovideroutputsource", provider, src],
+        stdout=sys.stdout,
+        stderr=sys.stderr,
+    )
+
+
+def get_connected_monitors() -> Set[str]:
+    output: Set[str] = set(
+        subprocess.check_output("xrandr", shell=True)
+        .decode()
+        .splitlines()
+    )
+    return [
+        connected_monitor.split()[0]
+        for connected_monitor in output
+        if " connected " in connected_monitor
+    ]
+
+
+def set_monitor(
+    monitor_1: str, position: Position, monitor_2: str
+) -> None:
+    xrandr_result: subprocess.CompletedProcess = subprocess.run(
+        ["xrandr", "--output", monitor_1, "--auto", position.value, monitor_2], 
+        stdout=sys.stdout,
+        stderr=sys.stderr,
+    )
+    if xrandr_result.returncode != 0:
+        print("set monitor output failed")
+        sys.exit(1)
+    print(f"{monitor_1} {position} {monitor_2}")
+
+
+def main() -> None:
+    connected_monitors = get_connected_monitors()
+    print (connected_monitors)
+
+    if "DVI-I-1-1" in connected_monitors:
+        set_monitor("DVI-I-1-1", Position.LEFT_OF, "eDP-1")
+
+    if "HDMI-1" in connected_monitors:
+        set_monitor("HDMI-1", Position.LEFT_OF, "eDP-1")
+
+    print(all(x in connected_monitors for x in ["DP-1-2", "DP-1-1"]))
+    if all(x in connected_monitors for x in ["DP-1-2", "DP-1-1"]):
+        set_monitor("DP-1-2", Position.LEFT_OF, "eDP-1")
+        set_monitor("DP-1-1", Position.LEFT_OF, "DP-1-2")
+
+    if "DP-1-2" in connected_monitors and "DP-1-1" not in connected_monitors:
+        set_monitor("DP-1-2", Position.ABOVE, "eDP-1")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,6 @@
+.vscode
+*.db
+.mypy_cache
+*copy.*
+tmux-*
+tmux

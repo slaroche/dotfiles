@@ -1,0 +1,119 @@
+[[snippets]]
+  description = "Port forward Database Staging"
+  command = "~/git/flare/pyro/carbon/bin/kubectl-staging port-forward postgresql-rs-0 5432"
+  output = ""
+
+[[snippets]]
+  description = "Port forward Database Production"
+  command = "~/git/flare/pyro/carbon/bin/kubectl-production port-forward postgresql-rs-0 5432"
+  output = ""
+
+[[snippets]]
+  description = "Connect to forwarded database"
+  command = "pgcli postgresql://pyro:pyro@localhost:5432/pyro"
+  output = ""
+
+[[snippets]]
+  description = "Connect to minikube database"
+  command = "pgcli postgresql://pyro:pyro@$(minikube ip):$(kubectl get service postgresql -o jsonpath='{.spec.ports[0].nodePort}')"
+  output = ""
+
+[[snippets]]
+  description = "Display disk space at current directory"
+  command = "du -h --max-depth=1 . | sort -rh"
+  output = ""
+
+[[snippets]]
+  description = "List all available schemas in PostgreSQL"
+  command = "SELECT schema_name FROM information_schema.schemata"
+  output = ""
+
+[[snippets]]
+  description = "Find in files"
+  command = "ag --nobreak --nonumbers --noheading . | fzf --delimiter=: --nth=2.."
+  output = ""
+
+[[snippets]]
+  description = "set volume"
+  command = "wl-copy pactl set-sink-volume 1 50%"
+  output = ""
+
+[[snippets]]
+  description = "Sway Workspace Renamer"
+  command = "wl-copy ~/.cargo/bin/swaywsr"
+  output = ""
+
+[[snippets]]
+  description = "wl-past Watcher"
+  command = "wl-paste -t text --watch ~/bin/clipman store"
+  output = ""
+
+[[snippets]]
+  description = "retry when error"
+  command = "while true; do $cmd && break || sleep 2; done"
+  output = ""
+
+[[snippets]]
+  description = "Login to Lastpass"
+  command = "wl-copy lpass login slplaroche@gmail.com"
+  output = ""
+
+[[snippets]]
+  description = "Delete all .pyc files"
+  command = "find . -name \\*.pyc -delete"
+  output = ""
+
+[[snippets]]
+  description = "Disable touchpad while typing"
+  command = "syndaemon -K -i 0.5 -R -d"
+  output = ""
+
+[[snippets]]
+  description = "Touchpad naturel Scroll"
+  command = "synclient VertScrollDelta=-30"
+  output = ""
+
+[[snippets]]
+  description = "Setup second monitor"
+  command = "xrandr --output DVI-I-1-1 --auto --above eDP-1"
+  output = ""
+
+[[snippets]]
+  description = "Swap caps and escape"
+  command = "setxkbmap -option caps:swapescape" 
+  output = ""
+
+[[snippets]]
+  description = "Caps Lock is also a Ctrl"
+  command = "setxkbmap -option caps:ctrl_modifier"
+  output = ""
+
+[[snippets]]
+  description = "Switching to another layout "
+  command = "setxkbmap -option grp:win_space_toggle"
+  output = ""
+
+[[snippets]]
+  description = "xrandr set provider"
+  command = "xrandr --setprovideroutputsource 1 0"
+  output = ""
+
+[[snippets]]
+  description = "xrandr list provider"
+  command = "xrandr --listproviders"
+  output = ""
+
+[[snippets]]
+  description = "Freeze requirements"
+  command = "python -m pip freeze > requirements.txt"
+  output = ""
+
+[[snippets]]
+  description = "mkvenv"
+  command = "python -m venv venv"
+  output = ""
+
+[[snippets]]
+  description = "i3 run and select window to show class or title"
+  command = "xprop | grep [WM_CLASS, WM_NAME]"
+  output = ""

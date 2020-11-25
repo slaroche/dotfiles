@@ -1,0 +1,62 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.rulers": [120],
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.coverage": true,
+        "**/.mypy_cache": true,
+        "**/.mypy_cache_strict": true,
+        "**/.pytest_cache": true,
+        "**/.vscode": true,
+        "**/*.egg-info": true,
+        "**/*.log": true,
+        "**/node_modules": true
+    },
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [">"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<"],
+            "commands": ["editor.action.outdentLines"]
+        },
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["<C-C>"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["<C-a>"],
+            "commands": [
+                "cursorHome"
+            ],
+        },
+        {
+            "before": ["<C-e>"],
+            "commands": [
+                "cursorEnd"
+            ],
+        },
+    ],
+    "vim.useSystemClipboard": true,
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": true,
+    "editor.renderWhitespace": "none",
+    "editor.autoClosingQuotes": "never",
+    "files.insertFinalNewline": true,
+    "html.format.endWithNewline": true,
+    "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "launch": {},
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "editor.renderControlCharacters": true,
+    "editor.fontSize": 14,
+    "vtools.autoHideSideBar": true,
+    "vtools.autoHideDelay": 1,
+    "window.zoomLevel": 0,
+    "keyboard.dispatch": "keyCode"
+}

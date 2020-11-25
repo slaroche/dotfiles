@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+
+import argparse  # https://docs.python.org/3/library/argparse.html
+import subprocess
+import sys
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Go to next available workspace number.")
+    parser.add_argument("--move", "-m", action="store_true", dest="move", help='Move container to workspace.') 
+
+    return parser.parse_args()
+
+
+def get_workspaces():
+    output = set(
+        subprocess.check_output("i3-msg -t get_workspaces", shell=True)
+        .decode()
+        .splitlines()
+    )
+    return eval([*output][0].replace("false", "False").replace("true", "True"))
+
+
+def workspace(*, number):
+    subprocess.run(
+        ["i3-msg", "workspace", "number", number],
+        stdout=sys.stdout,
+        stderr=sys.stderr,
+    )
+
+
+def move_container_to_workspace(*, number):
+    subprocess.run(
+        ["i3-msg", "move", "container", "to", "workspace", "number", number],
+        stdout=sys.stdout,
+        stderr=sys.stderr,
+    )
+
+
+def main():
+    workspaces = get_workspaces()
+    numbers = [workspace["num"] for workspace in workspaces]
+    
+    next_number = 1
+    for i in range(1, 10):
+        if i not in numbers:
+            next_number = i
+            break
+    
+    args = parse_args()
+    if args.move:
+        move_container_to_workspace(number=str(next_number))
+    else:
+        workspace(number=str(next_number))
+
+
+if __name__ == "__main__":
+    main()
