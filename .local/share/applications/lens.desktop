@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Lens
+StartupWMClass=Lens
+Comment=Lens is the only IDE you’ll ever need to take control of your Kubernetes clusters. It's open source and free.
+Exec=/home/samuel/app/Discord/Discord
+Type=Application

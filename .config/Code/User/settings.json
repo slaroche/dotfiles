@@ -58,5 +58,6 @@
     "vtools.autoHideSideBar": true,
     "vtools.autoHideDelay": 1,
     "window.zoomLevel": 0,
-    "keyboard.dispatch": "keyCode"
+    "keyboard.dispatch": "keyCode",
+    "jupyter.askForKernelRestart": false
 }

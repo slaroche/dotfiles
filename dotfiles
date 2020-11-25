@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
-# TODO:
-# - add argument add file
-# - add argument dry run
+"""TODO: 
+- add argument add file
+- add argument dry run
+"""
 
 import argparse  # https://docs.python.org/3/library/argparse.html
 import errno
