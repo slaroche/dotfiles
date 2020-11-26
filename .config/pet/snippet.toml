@@ -117,3 +117,8 @@
   description = "i3 run and select window to show class or title"
   command = "xprop | grep [WM_CLASS, WM_NAME]"
   output = ""
+
+[[snippets]]
+  description = "keychron F keys first"
+  command = "echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode"
+  output = ""
