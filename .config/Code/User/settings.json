@@ -49,15 +49,30 @@
     "html.format.endWithNewline": true,
     "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "launch": {},
-    "editor.fontFamily": "Fira Code",
+    // "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "Menlo",
     "editor.fontLigatures": true,
-    "workbench.iconTheme": "eq-material-theme-icons-darker",
     "editor.renderControlCharacters": true,
-    "editor.fontSize": 14,
-    "vtools.autoHideSideBar": true,
-    "vtools.autoHideDelay": 1,
-    "window.zoomLevel": 0,
     "keyboard.dispatch": "keyCode",
-    "update.mode": "none"
+    "diffEditor.ignoreTrimWhitespace": false,
+    "python.languageServer": "Pylance",
+    "window.zoomLevel": 0.9,
+    "python.analysis.memory.keepLibraryAst": true,
+    "python.diagnostics.sourceMapsEnabled": true,
+    "javascript.format.semicolons": "insert",
+    "typescript.extension.sortImports.sortMethod": "path",
+    "typescript.extension.sortImports.pathSortOrder": [
+        "package",
+        "relativeUpLevel",
+        "relativeDownLevel"
+    ],
+    "editor.fontSize": 12,
+    "python.linting.mypyPath": "/home/samuel/git/pyro/venv/bin/mypy",
+    "python.linting.mypyEnabled": true,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
 }

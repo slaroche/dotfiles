@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="panels" type="array">
+    <value type="int" value="0"/>
+    <property name="panel-0" type="empty">
+      <property name="position" type="string" value="p=11;x=730;y=540"/>
+      <property name="length" type="uint" value="100"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="3"/>
+        <value type="int" value="7"/>
+        <value type="int" value="4"/>
+        <value type="int" value="1"/>
+        <value type="int" value="6"/>
+        <value type="int" value="9"/>
+        <value type="int" value="10"/>
+        <value type="int" value="5"/>
+        <value type="int" value="2"/>
+      </property>
+      <property name="role" type="string" value="xfce4-panel-12965750720"/>
+      <property name="length-adjust" type="bool" value="true"/>
+      <property name="background-style" type="uint" value="0"/>
+      <property name="size" type="uint" value="25"/>
+      <property name="mode" type="uint" value="0"/>
+      <property name="autohide-behavior" type="uint" value="0"/>
+      <property name="disable-struts" type="bool" value="false"/>
+      <property name="icon-size" type="uint" value="20"/>
+      <property name="span-monitors" type="bool" value="false"/>
+      <property name="output-name" type="string" value="Primary"/>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-2" type="string" value="actions">
+      <property name="appearance" type="uint" value="0"/>
+      <property name="invert-orientation" type="bool" value="false"/>
+      <property name="items" type="array">
+        <value type="string" value="-logout-dialog"/>
+        <value type="string" value="-switch-user"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="+logout"/>
+        <value type="string" value="-lock-screen"/>
+        <value type="string" value="-hibernate"/>
+        <value type="string" value="-suspend"/>
+        <value type="string" value="-restart"/>
+        <value type="string" value="-shutdown"/>
+      </property>
+    </property>
+    <property name="plugin-4" type="string" value="pager">
+      <property name="rows" type="uint" value="1"/>
+    </property>
+    <property name="plugin-6" type="string" value="systray">
+      <property name="names-visible" type="array">
+        <value type="string" value="pnmixer"/>
+        <value type="string" value="manjaro-settings-manager-daemon"/>
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="orage"/>
+        <value type="string" value="pamac-tray"/>
+        <value type="string" value="blueman-applet"/>
+        <value type="string" value="clipman"/>
+        <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="xnoise"/>
+      </property>
+      <property name="show-frame" type="bool" value="false"/>
+      <property name="names-ordered" type="array">
+        <value type="string" value="kontena-lens"/>
+        <value type="string" value="steam"/>
+        <value type="string" value="albert"/>
+        <value type="string" value="qbittorrent"/>
+        <value type="string" value="vlc"/>
+        <value type="string" value="task manager"/>
+        <value type="string" value="thunar"/>
+        <value type="string" value="drop-down terminal"/>
+        <value type="string" value="bluetooth enabled"/>
+        <value type="string" value="pidgin"/>
+        <value type="string" value="discord"/>
+        <value type="string" value="xfce terminal"/>
+        <value type="string" value="msm notifier"/>
+        <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="blueman-tray"/>
+        <value type="string" value="clipman"/>
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="pamac-tray"/>
+      </property>
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="thunar"/>
+        <value type="string" value="xfce terminal"/>
+        <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="pamac-tray"/>
+        <value type="string" value="clipman"/>
+      </property>
+      <property name="known-items" type="array">
+        <value type="string" value="discord1"/>
+        <value type="string" value="albert"/>
+        <value type="string" value="blueman"/>
+      </property>
+    </property>
+    <property name="plugin-3" type="string" value="tasklist">
+      <property name="grouping" type="uint" value="0"/>
+      <property name="sort-order" type="uint" value="4"/>
+      <property name="middle-click" type="uint" value="2"/>
+      <property name="flat-buttons" type="bool" value="false"/>
+      <property name="show-labels" type="bool" value="true"/>
+      <property name="show-handle" type="bool" value="true"/>
+      <property name="show-wireframes" type="bool" value="false"/>
+      <property name="include-all-workspaces" type="bool" value="false"/>
+    </property>
+    <property name="plugin-7" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-9" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="mpris-players" type="string" value="chrome.instance1156800;chrome.instance1307;chrome.instance1474;chrome.instance1481;chrome.instance1498;chrome.instance1500;chrome.instance1502;chrome.instance1505;chrome.instance1509;chrome.instance1523;chrome.instance1534;chrome.instance1548;chrome.instance1553;chrome.instance1565;chrome.instance1569;chrome.instance1571;chrome.instance1575;chrome.instance1576;chrome.instance1579;chrome.instance1581;chrome.instance1584;chrome.instance1587;chrome.instance1593;chrome.instance1595;chrome.instance1599;chrome.instance1601;chrome.instance1603;chrome.instance1604;chrome.instance1612;chrome.instance1615;chrome.instance1617;chrome.instance1619;chrome.instance1621;chrome.instance1622;chrome.instance1625;chrome.instance1628;chrome.instance1629;chrome.instance1630;chrome.instance1632;chrome.instance1633;chrome.instance1637;chrome.instance1639;chrome.instance1640;chrome.instance1642;chrome.instance1645;chrome.instance1646;chrome.instance1649;chrome.instance1650;chrome.instance1651;chrome.instance1659;chrome.instance1661;chrome.instance1662;chrome.instance1663;chrome.instance1665;chrome.instance1670;chrome.instance1672;chrome.instance1675;chrome.instance1677;chrome.instance1680;chrome.instance1681;chrome.instance1687;chrome.instance1689;chrome.instance1694;chrome.instance1697;chrome.instance1699;chrome.instance1702;chrome.instance1708;chrome.instance1735;chrome.instance1738;chrome.instance1751;chrome.instance1752;chrome.instance1763;chrome.instance1769;chrome.instance1780;chrome.instance1782;chrome.instance1783;chrome.instance1786;chrome.instance1788;chrome.instance1790;chrome.instance1796;chrome.instance1798;chrome.instance1800;chrome.instance1804;chrome.instance1810;chrome.instance1821;chrome.instance1825;chrome.instance1830;chrome.instance1831;chrome.instance1839;chrome.instance1848;chrome.instance1855;chrome.instance1863;chrome.instance18762;chrome.instance1882;chrome.instance1888;chrome.instance1895;chrome.instance1897;chrome.instance1899;chrome.instance1904;chrome.instance1917;chrome.instance1951;chrome.instance1962;chrome.instance1973;chrome.instance20058;chrome.instance2007;chrome.instance2012;chrome.instance2013;chrome.instance2022;chrome.instance20725;chrome.instance20768;chrome.instance2081;chrome.instance2106;chrome.instance2166;chrome.instance2184;chrome.instance2212;chrome.instance2213;chrome.instance2248;chrome.instance2252;chrome.instance2308;chrome.instance2327;chrome.instance2372;chrome.instance24330;chrome.instance2505;chrome.instance2577;chrome.instance261497;chrome.instance2634;chrome.instance2657;chrome.instance2691;chrome.instance27929;chrome.instance282362;chrome.instance28289;chrome.instance2845;chrome.instance2984;chrome.instance3114;chrome.instance3230;chrome.instance333788;chrome.instance33485;chrome.instance3400886;chrome.instance3849;chrome.instance3879695;chrome.instance47024;chrome.instance501566;chrome.instance6154;chrome.instance6175;chrome.instance79876;chrome.instance83290;chrome.instance955092;chrome.instance99359;chromium.instance187329;chromium.instance674634;vlc"/>
+    </property>
+    <property name="plugin-5" type="string" value="clock">
+      <property name="mode" type="uint" value="2"/>
+    </property>
+    <property name="plugin-10" type="string" value="xkb">
+      <property name="display-type" type="uint" value="2"/>
+      <property name="display-name" type="uint" value="1"/>
+      <property name="display-scale" type="uint" value="100"/>
+      <property name="caps-lock-indicator" type="bool" value="true"/>
+      <property name="display-tooltip-icon" type="bool" value="true"/>
+      <property name="group-policy" type="uint" value="1"/>
+    </property>
+    <property name="plugin-1" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="false"/>
+    </property>
+  </property>
+  <property name="configver" type="int" value="2"/>
+</channel>
