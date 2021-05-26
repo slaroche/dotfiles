@@ -1,8 +1,5 @@
 [core]
     excludesfile = ~/.gitignore_global
-[user]
-	name = Your Name
-	email = you@example.com
 [rebase]
     autoStash = true
 [credential]
