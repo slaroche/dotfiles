@@ -2,6 +2,7 @@
 set -exo pipefail
 
 dir=$(realpath $(dirname $0))
-target=$1
+target=$(realpath $1)
+target_dir=${HOME}${target/$dir/}
 
-ln -sf ${dir}/${target} ${HOME}/${target}
+ln -sf ${target} ${target_dir}
