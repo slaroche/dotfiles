@@ -146,38 +146,34 @@ alias ll="ls -al"
 
 export PATH="$PATH:$HOME/bin"
 
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# fzf
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
 
+# vscode
 export PATH="$HOME/app/VSCode/bin:$PATH"
 
-alias kubectl-dev="${HOME}/git/pyro/carbon/bin/kubectl-minikube"
-alias kubectl-stag="${HOME}/git/pyro/carbon/bin/kubectl-staging"
-alias kubectl-prod="${HOME}/git/pyro/carbon/bin/kubectl-production"
+# kubectl
+[ -r ${HOME}/.kubectl.bash ] && source ${HOME}/.kubectl.bash
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/samuel/app/google-cloud-sdk/path.bash.inc' ]; then . '/home/samuel/app/google-cloud-sdk/path.bash.inc'; fi
+[ -f "${HOME}/app/google-cloud-sdk/path.bash.inc" ] && . "${HOME}/app/google-cloud-sdk/path.bash.inc"
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/samuel/app/google-cloud-sdk/completion.bash.inc' ]; then . '/home/samuel/app/google-cloud-sdk/completion.bash.inc'; fi
-
-export PATH="$HOME/app/Discord/bin:$PATH"
+[ -f "${HOME}/app/google-cloud-sdk/completion.bash.inc" ] && . "${HOME}/app/google-cloud-sdk/completion.bash.inc"
 
 # terraform
-
-alias tf="~/app/terraform"
-
-# via
-alias via="~/app/via.AppImage"
-source "$HOME/.cargo/env"
+alias tf="${HOME}/app/terraform"
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
