@@ -164,7 +164,7 @@ source /usr/share/fzf/completion.bash
 export PATH="$HOME/app/VSCode/bin:$PATH"
 
 # kubectl
-[ -r ${HOME}/.kubectl.bash ] && source ${HOME}/.kubectl.bash
+[ -r ${HOME}/extra/kubectl_aliases ] && source ${HOME}/extra/kubectl_aliases
 
 # The next line updates PATH for the Google Cloud SDK.
 [ -f "${HOME}/app/google-cloud-sdk/path.bash.inc" ] && . "${HOME}/app/google-cloud-sdk/path.bash.inc"
