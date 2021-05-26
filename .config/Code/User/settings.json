@@ -56,7 +56,6 @@
     "keyboard.dispatch": "keyCode",
     "diffEditor.ignoreTrimWhitespace": false,
     "python.languageServer": "Pylance",
-    "window.zoomLevel": 0.9,
     "python.analysis.memory.keepLibraryAst": true,
     "python.diagnostics.sourceMapsEnabled": true,
     "javascript.format.semicolons": "insert",
@@ -75,4 +74,6 @@
             "filenamePattern": "*.ipynb"
         }
     ],
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "window.zoomLevel": 1,
 }
