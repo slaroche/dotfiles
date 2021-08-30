@@ -1,0 +1,36 @@
+#
+# ~/.bashrc_me
+#
+
+# fzf
+if [ -d "/usr/share/fzf" ]; then
+    source /usr/share/fzf/key-bindings.bash
+    source /usr/share/fzf/completion.bash
+fi
+
+# kubectl
+[ -r ${HOME}/extra/kubectl_aliases ] && source ${HOME}/extra/kubectl_aliases
+
+# The next line updates PATH for the Google Cloud SDK.
+[ -f "${HOME}/app/google-cloud-sdk/path.bash.inc" ] && . "${HOME}/app/google-cloud-sdk/path.bash.inc"
+
+# The next line enables shell command completion for gcloud.
+[ -f "${HOME}/app/google-cloud-sdk/completion.bash.inc" ] && . "${HOME}/app/google-cloud-sdk/completion.bash.inc"
+
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# alacritty
+[ -f "${HOME}/app/alacritty/extra/completions/alacritty.bash" ] && source $HOME/app/alacritty/extra/completions/alacritty.bash
+
+# golang
+export PATH=$PATH:/usr/local/go/bin
+
+# set editor
+export EDITOR="vim"
+
+# set alacritty completions
+source /home/samuel/app/alacritty/extra/completions/alacritty.bash
+
+# set rust env 
+. "$HOME/.cargo/env"
