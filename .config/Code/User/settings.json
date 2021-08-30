@@ -54,26 +54,41 @@
     "editor.fontLigatures": true,
     "editor.renderControlCharacters": true,
     "keyboard.dispatch": "keyCode",
-    "diffEditor.ignoreTrimWhitespace": false,
     "python.languageServer": "Pylance",
     "python.analysis.memory.keepLibraryAst": true,
     "python.diagnostics.sourceMapsEnabled": true,
     "javascript.format.semicolons": "insert",
-    "typescript.extension.sortImports.sortMethod": "path",
-    "typescript.extension.sortImports.pathSortOrder": [
-        "package",
-        "relativeUpLevel",
-        "relativeDownLevel"
-    ],
-    "editor.fontSize": 12,
-    "python.linting.mypyPath": "/home/samuel/git/pyro/venv/bin/mypy",
-    "python.linting.mypyEnabled": true,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "editor.fontSize": 14,
+    "python.linting.mypyPath": "/home/samuel/dev/pyro/venv/bin/mypy",
+    "python.pythonPath": "/home/samuel/dev/pyro/venv/bin/python",
+    "python.analysis.extraPaths": ["app"],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "window.zoomLevel": 1,
+    "terminal.integrated.fontFamily": "monospace",
+    "go.formatTool": "goimports",
+    "go.testOnSave": true,
+    "terminal.integrated.tabs.enabled": true,
+    "python.linting.flake8Path": "/home/samuel/dev/pyro/venv/bin/flake8",
+    "python.linting.mypyEnabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.pylintUseMinimalCheckers": false,
+    "editor.cursorStyle": "line",
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "workbench.tree.indent": 4,
+    "[typescript]": {
+        "editor.tabSize": 2,
+    },
+    "[python]": {
+        "editor.tabSize": 4,
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "debug.showInlineBreakpointCandidates": false,
 }
