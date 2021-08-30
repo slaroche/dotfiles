@@ -5,14 +5,13 @@
 [credential]
     helper = store
 [alias]
+    clean-branches = !git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D
+    start = checkout -b
     ca = commit --amend
     can = commit --amend --no-edit
-    l = log --graph --decorate --oneline -10
+    l = log --graph --decorate --oneline -n 5
     p = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
-    rb = !git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D
     s = status -b -s
-    sl = stash list
-    sp = stash pop
-    up = !git fetch --all && git fetch origin --prune && git rb
+    up = !git fetch --all && git fetch origin --prune && git clean-branches
 [tag]
     forceSignAnnotated = true
