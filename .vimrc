@@ -17,7 +17,7 @@ set exrc
 set secure
 
 set breakindent
-set showbreak=\\\\\
+" set showbreak=\\\\\
 set conceallevel=0
 
 set autoread
