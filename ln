@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
-set -exo pipefail
+set -eo pipefail
 
-dir=$(realpath $(dirname $0))
-target=$(realpath $1)
-target_dir=${HOME}${target/$dir/}
+dotfiles_dir=$(realpath $(dirname $0))
+source=$(realpath $1)
+destination=${HOME}${source/$dotfiles_dir/}
 
-ln -sf ${target} ${target_dir}
+if [ -f ${source} ]; then
+	ln -sf ${source} ${destination}
+elif [ -f ${destination} ]; then
+    mv ${destination} ${source}
+	ln -sf ${source} ${destination}
+fi
