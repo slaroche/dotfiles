@@ -175,8 +175,34 @@
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Tomorrow Night)
+# Colors (Horizon Dark)
 colors:
+  # Primary colors
+  primary:
+    background: '0x1c1e26'
+    foreground: '0xe0e0e0'
+
+  # Normal colors
+  normal:
+    black: '0x16161c'
+    red: '0xe95678'
+    green: '0x29d398'
+    yellow: '0xfab795'
+    blue: '0x26bbd9'
+    magenta: '0xee64ac'
+    cyan: '0x59e1e3'
+    white: '0xd5d8da'
+
+  # Bright colors
+  bright:
+    black: '0x5b5858'
+    red: '0xec6a88'
+    green: '0x3fdaa4'
+    yellow: '0xfbc3a7'
+    blue: '0x3fc4de'
+    magenta: '0xf075b5'
+    cyan: '0x6be4e6'
+    white: '0xd5d8da'
   # Default colors
   # primary:
   #  background: '#1d1f21'
@@ -851,30 +877,3 @@ colors:
   # Print all received window events.
   #print_events: false
 
-# Colors (Darkside)
-colors:
-  primary:
-    background: '#222324'
-    foreground: '#BABABA'
-
-  # Normal colors
-  normal:
-    black:    '#000000'
-    red:      '#E8341C'
-    green:    '#68C256'
-    yellow:   '#F2D42C'
-    blue:     '#1C98E8'
-    magenta:  '#8E69C9'
-    cyan:     '#1C98E8'
-    white:    '#BABABA'
-
-  # Bright colors
-  bright:
-    black:    '#666666'
-    red:      '#E05A4F'
-    green:    '#77B869'
-    yellow:   '#EFD64B'
-    blue:     '#387CD3'
-    magenta:  '#957BBE'
-    cyan:     '#3D97E2'
-    white:    '#BABABA'
