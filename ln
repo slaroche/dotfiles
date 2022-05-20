@@ -1,5 +1,21 @@
 #!/usr/bin/env bash
 set -eo pipefail
+set -x
+
+function print_usage {
+    echo "Usage: $0 <target file>" >&2
+    exit 1
+}
+if [ "$#" -ne 1 ]; then
+    echo "$0: Illegal number of parameters" >&2
+    print_usage
+    exit 1
+fi
+
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+    print_usage
+    exit 1
+fi
 
 dotfiles_dir=$(realpath $(dirname $0))
 source=$(realpath $1)

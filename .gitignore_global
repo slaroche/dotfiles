@@ -1,7 +1,8 @@
-.vscode
+*.code-workspace
 *.db
-.mypy_cache
 *copy.*
+.mypy_cache
 tmux-*
 tmux
 tmp/
+.vscode

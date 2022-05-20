@@ -49,18 +49,18 @@
     "html.format.endWithNewline": true,
     "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
     "typescript.updateImportsOnFileMove.enabled": "always",
-    // "editor.fontFamily": "Fira Code",
-    "editor.fontFamily": "Menlo",
+
+    "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
+    "editor.fontWeight": "400",
+    // "editor.fontFamily": "Menlo
+
     "editor.renderControlCharacters": true,
     "keyboard.dispatch": "keyCode",
     "python.languageServer": "Pylance",
-    "python.analysis.memory.keepLibraryAst": true,
     "python.diagnostics.sourceMapsEnabled": true,
     "javascript.format.semicolons": "insert",
-    "editor.fontSize": 14,
-    "python.linting.mypyPath": "/home/samuel/dev/pyro/venv/bin/mypy",
-    "python.pythonPath": "/home/samuel/dev/pyro/venv/bin/python",
+    "python.linting.mypyPath": "${workspaceFolder}/venv/bin/mypy",
     "python.analysis.extraPaths": ["app"],
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
@@ -70,15 +70,13 @@
     "go.formatTool": "goimports",
     "go.testOnSave": true,
     "terminal.integrated.tabs.enabled": true,
-    "python.linting.flake8Path": "/home/samuel/dev/pyro/venv/bin/flake8",
+    "python.linting.flake8Path": "${workspaceFolder}/venv/bin/flake8",
     "python.linting.mypyEnabled": true,
     "python.linting.pylintEnabled": false,
-    "python.linting.pylintUseMinimalCheckers": false,
     "editor.cursorStyle": "line",
     "editor.lineNumbers": "on",
     "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
     "editor.wordWrap": "off",
-    "workbench.tree.indent": 4,
     "[typescript]": {
         "editor.tabSize": 2,
     },
@@ -91,4 +89,8 @@
     },
     "diffEditor.ignoreTrimWhitespace": false,
     "debug.showInlineBreakpointCandidates": false,
+    "python.venvPath": "${workspaceFolder}/venv",
+    "workbench.tree.indent": 12,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.codeLensFontSize": 1,
 }
