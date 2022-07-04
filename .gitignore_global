@@ -6,3 +6,4 @@ tmux-*
 tmux
 tmp/
 .vscode
+.envrc
