@@ -72,6 +72,7 @@
         "<C-f>": false,
         "<C-v>": true,
         "<C-a>": true,
+        "<C-u>": true,
     },
     "vim.useSystemClipboard": true,
     "editor.renderWhitespace": "none",
