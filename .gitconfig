@@ -12,6 +12,6 @@
     l = log --graph --decorate --oneline -n 5
     p = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
     s = status -b -s
-    up = !git fetch --all && git fetch origin --prune && git clean-branches
+    up = !git fetch --all --prune && git clean-branches
 [tag]
     forceSignAnnotated = true

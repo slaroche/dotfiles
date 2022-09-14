@@ -129,4 +129,6 @@
     "window.titleBarStyle": "custom",
     "window.commandCenter": true,
     "python.terminal.activateEnvironment": false,
+    "terminal.integrated.fontSize": 14,
+    "window.zoomLevel": -1,
 }
