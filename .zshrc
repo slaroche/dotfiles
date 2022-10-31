@@ -6,7 +6,7 @@ PS1="%1~ > "
 # history
 HISTSIZE=1000
 SAVEHIST=1000
-HISTFILE=~/.cache/zsh/history
+# HISTFILE=~/.cache/zsh/history
 setopt appendhistory
 
 XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
@@ -18,10 +18,8 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)  # Include hidden files
 
-# my config
-
 # aliases
-[ -f "$HOME/.zsh_aliases" ] && source "$HOME/.zsh_aliases"
+[ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
 
 alias venv='dir=$(git rev-parse --show-toplevel) && source $dir/venv/bin/activate 2>/dev/null || echo "no venv"'
 alias ll="ls -al"
@@ -46,4 +44,3 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2
 # zsh autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept
-

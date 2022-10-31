@@ -81,5 +81,17 @@
     {
         "key": "ctrl+s",
         "command": "workbench.action.files.saveFiles"
+    },
+    {
+        "key": "cmd+o",
+        "command": "git.openFile"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "workbench.action.findInFiles"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "-workbench.action.findInFiles"
     }
 ]

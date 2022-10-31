@@ -84,7 +84,7 @@
     "editor.fontLigatures": true,
     "editor.fontWeight": "normal",
     // "editor.fontFamily": "Fira Code",
-    "editor.fontFamily": "Dank Mono",
+    // "editor.fontFamily": "Dank Mono",
 
     "editor.renderControlCharacters": true,
     "keyboard.dispatch": "keyCode",
@@ -125,10 +125,8 @@
     "editor.codeLensFontSize": 1,
     "extensions.ignoreRecommendations": true,
     "emmet.useInlineCompletions": true,
-    "editor.fontSize": 16,
     "window.titleBarStyle": "custom",
     "window.commandCenter": true,
     "python.terminal.activateEnvironment": false,
     "terminal.integrated.fontSize": 14,
-    "window.zoomLevel": -1,
 }
