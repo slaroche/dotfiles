@@ -1,6 +1,5 @@
 {
     "files.autoSave": "onFocusChange",
-    "editor.rulers": [120],
     "files.exclude": {
         "**/__pycache__": true,
         "**/.coverage": true,
@@ -10,8 +9,14 @@
         "**/.vscode": true,
         "**/*.egg-info": true,
         "**/*.log": true,
-        "**/node_modules": true
+        "**/node_modules": true,
+        "**/venv": true
     },
+    "files.insertFinalNewline": true,
+    "files.associations": {
+        "BUILD": "python"
+    },
+
     "vim.visualModeKeyBindings": [
         {
             "before": [">"],
@@ -23,11 +28,6 @@
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
-        // {
-        //     "before": ["w"],
-        //     "after": ["v", "i", "w"]
-        // },
-
         {
             "before": ["$"],
             "after": ["$", "h"]
@@ -61,12 +61,6 @@
             "commands": ["editor.action.outdentLines"]
         }
     ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        // {
-        //     "before": ["w"],
-        //     "after": ["v", "i", "w"]
-        // },
-    ],
     "vim.useCtrlKeys": false,
     "vim.handleKeys": {
         "<C-f>": false,
@@ -75,58 +69,145 @@
         "<C-u>": true,
     },
     "vim.useSystemClipboard": true,
-    "editor.renderWhitespace": "none",
-    "editor.autoClosingQuotes": "never",
-    "files.insertFinalNewline": true,
+
+
     "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
-    "typescript.updateImportsOnFileMove.enabled": "always",
+    "search.exclude": {
+        "**/.venv": true,
+        "**/*.code-search": true,
+        "**/bower_components": true,
+        "**/node_modules": true
+    },
 
     "editor.fontLigatures": true,
     "editor.fontWeight": "normal",
-    // "editor.fontFamily": "Fira Code",
-    // "editor.fontFamily": "Dank Mono",
-
+    "editor.fontFamily": "Fira Code",
     "editor.renderControlCharacters": true,
+    "editor.cursorStyle": "line",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.renderWhitespace": "none",
+    "editor.autoClosingQuotes": "never",
+    "editor.rulers": [90],
+
     "keyboard.dispatch": "keyCode",
-    "python.languageServer": "Pylance",
-    "python.diagnostics.sourceMapsEnabled": true,
     "javascript.format.semicolons": "insert",
-    "python.linting.mypyPath": "${workspaceFolder}/venv/bin/mypy",
-    "python.analysis.extraPaths": ["app"],
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
-    "javascript.updateImportsOnFileMove.enabled": "always",
+
+
     "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.fontSize": 16,
+
     "go.formatTool": "goimports",
     "go.testOnSave": true,
-    "terminal.integrated.tabs.enabled": true,
-    "python.linting.flake8Path": "${workspaceFolder}/venv/bin/flake8",
-    "python.linting.mypyEnabled": true,
-    "python.linting.pylintEnabled": false,
-    "editor.cursorStyle": "line",
-    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-    "editor.wordWrap": "off",
+    "go.toolsManagement.autoUpdate": true,
+
     "[typescript]": {
         "editor.tabSize": 2,
     },
     "[python]": {
         "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
     },
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "diffEditor.ignoreTrimWhitespace": false,
     "debug.showInlineBreakpointCandidates": false,
-    "python.venvPath": "${workspaceFolder}/venv",
     "workbench.tree.indent": 12,
     "security.workspace.trust.untrustedFiles": "open",
     "editor.codeLensFontSize": 1,
     "extensions.ignoreRecommendations": true,
     "emmet.useInlineCompletions": true,
+
     "window.titleBarStyle": "custom",
     "window.commandCenter": true,
+    
+    "python.venvPath": "${workspaceFolder}/venv",
     "python.terminal.activateEnvironment": false,
-    "terminal.integrated.fontSize": 14,
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.packageIndexDepths": [
+        {
+            "name": "", 
+            "depth": 15, 
+            "includeAllSymbols": true
+        },
+    ],
+
+    "workbench.editor.labelFormat": "short",
+    "diffEditor.ignoreTrimWhitespace": false,
+
+
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": true,
+
+    "eslint.format.enable": true,
+
+    "scm.defaultViewMode": "tree",
+
+    "GitLink.hostType": "gitlab",
+    "GitLink.defaultRemote": "origin/master",
+
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.wordWrapColumn": 120,
+    "bookmarks.saveBookmarksInProject": true,
+    "bookmarks.sideBar.expanded": true,
+    "cSpell.userWords": [
+        "aggs",
+        "aiassist",
+        "alertable",
+        "alib",
+        "andritz",
+        "asyncutils",
+        "aviau",
+        "bamboohr",
+        "creds",
+        "dateutil",
+        "desjardins",
+        "favicons",
+        "featureflag",
+        "featureflags",
+        "français",
+        "grayhat",
+        "highlightable",
+        "hostnames",
+        "jobdefinitions",
+        "jsonify",
+        "jsonutils",
+        "leaksdb",
+        "lockbit",
+        "model_name",
+        "multisearcher",
+        "nord",
+        "Opensearch",
+        "opensearchpy",
+        "outerjoin",
+        "patate",
+        "pendings",
+        "pyrolite",
+        "rabbitmq",
+        "ransomleak",
+        "ransomleaks",
+        "relativedelta",
+        "rematerialize",
+        "reqparse",
+        "restx",
+        "scorable",
+        "serde",
+        "shodan",
+        "slaroche",
+        "specchar",
+        "stackexchange",
+        "sticode",
+        "syncable",
+        "synthetize",
+        "testbench",
+        "unremediate",
+        "unremediated",
+        "whois"
+    ],
+    "ruff.configuration": "./pyproject.toml",
+    "ruff.organizeImports": true,
+    "chat.commandCenter.enabled": false,
 }

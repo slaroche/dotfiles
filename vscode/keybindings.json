@@ -87,11 +87,27 @@
         "command": "git.openFile"
     },
     {
-        "key": "ctrl+f",
-        "command": "workbench.action.findInFiles"
+        "key": "ctrl+/",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "shift+cmd+f",
-        "command": "-workbench.action.findInFiles"
+        "key": "ctrl+/",
+        "command": "-workbench.action.terminal.sendSequence",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+r",
+        "command": "workbench.action.reloadWindow",
+    },
+    {
+        "key": "cmd+e",
+        "command": "editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+.",
+        "command": "-editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
     }
 ]

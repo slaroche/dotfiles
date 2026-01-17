@@ -7,3 +7,8 @@ tmux
 tmp/
 .vscode
 .envrc
+pyrightconfig.json
+*.idea
+.DS_Store
+venv*
+run.py

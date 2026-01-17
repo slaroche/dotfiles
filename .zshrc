@@ -1,7 +1,17 @@
 # enable colors and change prompt
 export CLICOLOR=1
 autoload -U colors && colors
-PS1="%1~ > "
+PS1="%~ > "
+
+setopt PROMPT_SUBST
+
+# direnv and venv prompt
+show_virtual_env() {
+  if [[ -n "$VIRTUAL_ENV" && -n "$DIRENV_DIR" ]]; then
+    echo "$VIRTUAL_ENV_PROMPT | "
+  fi
+}
+PS1='$(show_virtual_env)'$PS1
 
 # history
 HISTSIZE=1000
@@ -21,8 +31,9 @@ _comp_options+=(globdots)  # Include hidden files
 # aliases
 [ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
 
+alias l='ls -al --color'
+alias ll="ls -al --color"
 alias venv='dir=$(git rev-parse --show-toplevel) && source $dir/venv/bin/activate 2>/dev/null || echo "no venv"'
-alias ll="ls -al"
 alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
 
 # pyenv
@@ -44,3 +55,34 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2
 # zsh autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept
+
+# Enable homebrew completion
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+# poetry
+export PATH="/Users/slaroche/.local/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# rust
+. "$HOME/.cargo/env"
+
+#docker
+export PATH="/Applications/Docker.app/Contents/Resources/bin/:$PATH"
+
+# editor
+export EDITOR=vim
+
+# go 
+export PATH="$PATH:$HOME/go/bin"
+
+# nim 
+export PATH="$PATH:$HOME/.nimble/bin"

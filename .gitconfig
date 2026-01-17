@@ -2,17 +2,33 @@
     excludesfile = ~/.gitignore_global
 [rebase]
     autoStash = true
+    updateRefs = true
 [credential]
     helper = store
+[pull]
+    rebase = true
+[push]
+    autoSetupRemote = true
 [alias]
-    clean-branches = !git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D
-    start = checkout -b
     ca = commit --amend
     can = commit --amend --no-edit
-    l = log --graph --decorate --oneline -n 10
-    p = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
+    l = log --color --graph -n 3 --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    ll = log --color --graph -n 12 --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    p = ! (git branch --unset-upstream || true) 2>/dev/null && git push --set-upstream origin --force
+    yeet = pof
+    f= fetch --all --prune --tags
     s = status -b -s
-    f = fetch
-    rom = rebase origin/master
+    r= !git f && git rebase origin/master && git s
+    la = config --get-regexp ^alias
+    next = stack next
+    prev = stack previous
+    reword = stack reword
+    amend = stack amend
+    sync = stack sync
+    run = stack run
 [tag]
     forceSignAnnotated = true
+[user]
+    name = Samuel Laroche
+[init]
+    defaultBranch = main
