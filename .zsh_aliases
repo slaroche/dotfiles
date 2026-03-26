@@ -1,4 +1,2 @@
-
-alias pl="/Users/slaroche/dev/pyro/carbon/bin/pyrolite"
-alias pants="/Users/slaroche/dev/pyro/bin/pants"
-alias npm="/Users/slaroche/dev/pyro/carbon/bin/npm"
+alias pl="/Users/slaroche/Code/pyro/carbon/bin/pyrolite"
+alias npm="/Users/slaroche/Code/pyro/carbon/bin/npm"

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Create symbolic links for dotfiles
+
+# ln -sf /Users/slaroche/Code/dotfiles/.zshrc /Users/slaroche/.zshrc
+ln -sf /Users/slaroche/Code/dotfiles/helix/config.toml /Users/slaroche/.config/helix/config.toml

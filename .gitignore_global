@@ -12,3 +12,6 @@ pyrightconfig.json
 .DS_Store
 venv*
 run.py
+settings.local.json
+codebook.toml
+CLAUDE.local.md

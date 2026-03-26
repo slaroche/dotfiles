@@ -262,4 +262,8 @@
     "python.languageServer": "None",
     "workbench.navigationControl.enabled": false,
     "cursor.inlineDiff.mode": "unified",
+    "workbench.colorTheme": "Default Dark Modern",
+    "remote.SSH.remotePlatform": {
+        "192.168.68.41": "linux"
+    },
 }

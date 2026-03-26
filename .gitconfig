@@ -29,6 +29,7 @@
 [tag]
     forceSignAnnotated = true
 [user]
-    name = Samuel Laroche
+	name = Samuel Laroche
+	email = samuel.laroche@flare.io
 [init]
     defaultBranch = main

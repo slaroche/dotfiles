@@ -1,0 +1,34 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+[
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "cmd-i": "editor::ToggleCodeActions",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      ">": ["workspace::SendKeystrokes", "> g v"],
+      "<": ["workspace::SendKeystrokes", "< g v"],
+    },
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "tab": "editor::Tab",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-t": "workspace::NewTerminal",
+      "cmd-right": "pane::ActivateNextItem",
+      "cmd-left": "pane::ActivatePreviousItem",
+    },
+  },
+]
